@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sprint0", "Sprint0.csproj", "{D503C135-D3FA-4532-B06A-8D0983528148}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{EBCB330E-3B0D-4270-AAE4-61CCF60EB1C4}"
+	ProjectSection(SolutionItems) = preProject
+		Commands\CommandExit.cs = Commands\CommandExit.cs
+		Commands\CommandSprite.cs = Commands\CommandSprite.cs
+		Sprites\fixedAnimatedSprite.cs = Sprites\fixedAnimatedSprite.cs
+		Sprites\fixedSprite.cs = Sprites\fixedSprite.cs
+		Commands\ICommand.cs = Commands\ICommand.cs
+		Controllers\IController.cs = Controllers\IController.cs
+		Sprites\ISprite.cs = Sprites\ISprite.cs
+		Controllers\KeyboardController.cs = Controllers\KeyboardController.cs
+		Sprites\movingAnimatedSprite.cs = Sprites\movingAnimatedSprite.cs
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D503C135-D3FA-4532-B06A-8D0983528148}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D503C135-D3FA-4532-B06A-8D0983528148}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D503C135-D3FA-4532-B06A-8D0983528148}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D503C135-D3FA-4532-B06A-8D0983528148}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {65EB1E50-3E59-4306-AC13-9FF184A4F8CC}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,15 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/ntram/source/repos/Sprint0/Content/Credits.spritefont","C:/Users/ntram/source/repos/Sprint0/Content/bin/DesktopGL/Content/Credits.xnb","FontDescriptionProcessor","SpriteFontContent",2068,21535,0.1726838
+"C:/Users/ntram/source/repos/Sprint0/Content/luigi.png","C:/Users/ntram/source/repos/Sprint0/Content/bin/DesktopGL/Content/luigi.xnb","TextureProcessor","Texture2DContent",327,2133,0.0962496
+"C:/Users/ntram/source/repos/Sprint0/Content/marioAnim/mario0.png","C:/Users/ntram/source/repos/Sprint0/Content/bin/DesktopGL/Content/marioAnim/mario0.xnb","TextureProcessor","Texture2DContent",334,2005,0.0936325
+"C:/Users/ntram/source/repos/Sprint0/Content/marioAnim/mario1.png","C:/Users/ntram/source/repos/Sprint0/Content/bin/DesktopGL/Content/marioAnim/mario1.xnb","TextureProcessor","Texture2DContent",334,1821,0.0017162
+"C:/Users/ntram/source/repos/Sprint0/Content/marioAnim/mario10.png","C:/Users/ntram/source/repos/Sprint0/Content/bin/DesktopGL/Content/marioAnim/mario10.xnb","TextureProcessor","Texture2DContent",313,1941,0.0013344
+"C:/Users/ntram/source/repos/Sprint0/Content/marioAnim/mario11.png","C:/Users/ntram/source/repos/Sprint0/Content/bin/DesktopGL/Content/marioAnim/mario11.xnb","TextureProcessor","Texture2DContent",322,1941,0.0012502
+"C:/Users/ntram/source/repos/Sprint0/Content/marioAnim/mario2.png","C:/Users/ntram/source/repos/Sprint0/Content/bin/DesktopGL/Content/marioAnim/mario2.xnb","TextureProcessor","Texture2DContent",345,2133,0.0010361
+"C:/Users/ntram/source/repos/Sprint0/Content/marioAnim/mario3.png","C:/Users/ntram/source/repos/Sprint0/Content/bin/DesktopGL/Content/marioAnim/mario3.xnb","TextureProcessor","Texture2DContent",361,2133,0.0011762
+"C:/Users/ntram/source/repos/Sprint0/Content/marioAnim/mario4.png","C:/Users/ntram/source/repos/Sprint0/Content/bin/DesktopGL/Content/marioAnim/mario4.xnb","TextureProcessor","Texture2DContent",355,2069,0.0009883
+"C:/Users/ntram/source/repos/Sprint0/Content/marioAnim/mario5.png","C:/Users/ntram/source/repos/Sprint0/Content/bin/DesktopGL/Content/marioAnim/mario5.xnb","TextureProcessor","Texture2DContent",311,1765,0.0009041
+"C:/Users/ntram/source/repos/Sprint0/Content/marioAnim/mario6.png","C:/Users/ntram/source/repos/Sprint0/Content/bin/DesktopGL/Content/marioAnim/mario6.xnb","TextureProcessor","Texture2DContent",298,1597,0.0009765
+"C:/Users/ntram/source/repos/Sprint0/Content/marioAnim/mario7.png","C:/Users/ntram/source/repos/Sprint0/Content/bin/DesktopGL/Content/marioAnim/mario7.xnb","TextureProcessor","Texture2DContent",317,2005,0.0010276
+"C:/Users/ntram/source/repos/Sprint0/Content/marioAnim/mario8.png","C:/Users/ntram/source/repos/Sprint0/Content/bin/DesktopGL/Content/marioAnim/mario8.xnb","TextureProcessor","Texture2DContent",314,1941,0.0009407
+"C:/Users/ntram/source/repos/Sprint0/Content/marioAnim/mario9.png","C:/Users/ntram/source/repos/Sprint0/Content/bin/DesktopGL/Content/marioAnim/mario9.xnb","TextureProcessor","Texture2DContent",299,1765,0.0009144
