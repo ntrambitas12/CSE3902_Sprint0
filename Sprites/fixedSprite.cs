@@ -2,30 +2,16 @@
 using Microsoft.Xna.Framework.Graphics;
 using System;
 
-public class fixedSprite: ISprite
+public class fixedSprite: staticSprite
 {
-	private SpriteBatch spriteBatch;
-	private Vector2 position;
-	private Texture2D texture;
+	
 
-	public fixedSprite(SpriteBatch spriteBatch, Vector2 position, Texture2D texture)
+	public fixedSprite(SpriteBatch spriteBatch, Vector2 position, Texture2D texture): base(spriteBatch, position, texture) { }
+
+
+	public override void Update()
 	{
-		this.spriteBatch = spriteBatch;
-		this.position = position;
-		this.texture = texture;
+		//No update action
 	}
 
-	public void Update()
-	{
-
-	}
-
-	public void Draw()
-	{
-        spriteBatch.GraphicsDevice.Clear(Color.CornflowerBlue);
-        spriteBatch.Begin();
-		spriteBatch.Draw(texture, position, Color.White);
-		spriteBatch.End();
-
-	}
 }
