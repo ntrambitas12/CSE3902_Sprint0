@@ -21,11 +21,7 @@ using System.Threading.Tasks;
     public abstract void Update();
     public void Draw()
     {
-        spriteBatch.GraphicsDevice.Clear(Color.CornflowerBlue);
-        spriteBatch.Begin();
         spriteBatch.Draw(texture, position, Color.White);
-        spriteBatch.End();
-
     }
 }
 

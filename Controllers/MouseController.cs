@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-     class MouseController: IController
+     class MouseController: IController, IUpdateable
     {
     private List<(Rectangle, ICommand, int)> actions;
 

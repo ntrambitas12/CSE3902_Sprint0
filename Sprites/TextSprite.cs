@@ -3,7 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using System;
 
 
-     class TextSprite: ISprite
+     class TextSprite: ISprite, IUpdateable
     {
     private Vector2 position;
     private String text;
@@ -18,14 +18,12 @@ using System;
     }
     public void Update()
     {
-
+        
     }
 
     public void Draw()
     {
-        spriteBatch.Begin();
         spriteBatch.DrawString(font, text, position, Color.Black);
-        spriteBatch.End();
     }
     }
 

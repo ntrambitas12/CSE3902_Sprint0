@@ -27,10 +27,8 @@ using System.Threading;
 
     public void Draw()
     {
-        spriteBatch.GraphicsDevice.Clear(Color.CornflowerBlue);
-        spriteBatch.Begin();
+       
         spriteBatch.Draw(textures[currentFrame], position, Color.White);
-        spriteBatch.End();
         Thread.Sleep(15);
 
     }
