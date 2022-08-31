@@ -4,8 +4,8 @@ using System;
 
     public interface ISprite
     {
-        void Update();
-        void Draw();
+    void Update();
+    void Draw();
     }
 
 

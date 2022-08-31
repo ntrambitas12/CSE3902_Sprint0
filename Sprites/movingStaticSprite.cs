@@ -2,20 +2,13 @@
 using Microsoft.Xna.Framework;
 using System;
 
-class movingStaticSprite: ISprite
+class movingStaticSprite: staticSprite
     {
-    private SpriteBatch spriteBatch;
-    private Vector2 position;
-    private Texture2D texture;
+  
 
-    public movingStaticSprite(SpriteBatch spriteBatch, Vector2 position, Texture2D texture)
-    {
-        this.spriteBatch = spriteBatch;
-        this.position = position;
-        this.texture = texture;
-    }
+    public movingStaticSprite(SpriteBatch spriteBatch, Vector2 position, Texture2D texture): base(spriteBatch, position, texture) { }
 
-    public void Update()
+    public override void Update()
     {
         if (position.Y >= 0 && position.Y <= 480)
         {
@@ -28,13 +21,5 @@ class movingStaticSprite: ISprite
 
     }
 
-    public void Draw()
-    {
-        spriteBatch.GraphicsDevice.Clear(Color.CornflowerBlue);
-        spriteBatch.Begin();
-        spriteBatch.Draw(texture, position, Color.White);
-        spriteBatch.End();
-
-    }
 }
 
