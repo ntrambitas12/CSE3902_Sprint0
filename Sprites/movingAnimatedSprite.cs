@@ -4,25 +4,11 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 
-public class movingAnimatedSprite : ISprite
+public class MovingAnimatedSprite : AnimatedSprite
 
-    /* See if we can inherit and override this class later */
 {
-  
-    private int currentFrame;
-    private int totalFrames;
-    private SpriteBatch spriteBatch;
-    private Vector2 position;
-    private List<Texture2D> textures;
-    public movingAnimatedSprite(SpriteBatch spriteBatch, Vector2 position, List<Texture2D> textures)
-    {
-        this.spriteBatch = spriteBatch;
-        this.position = position;
-        this.textures = textures;
-        currentFrame = 0;
-        totalFrames = this.textures.Count;
-    }
-    public void Update()
+    public MovingAnimatedSprite(SpriteBatch spriteBatch, Vector2 position, List<Texture2D> textures): base(spriteBatch, position, textures) { }
+    public override void Update()
     {
         currentFrame++;
         if (currentFrame == totalFrames)
@@ -39,13 +25,4 @@ public class movingAnimatedSprite : ISprite
         }
     }
 
-    public void Draw()
-    {
-        spriteBatch.GraphicsDevice.Clear(Color.CornflowerBlue);
-        spriteBatch.Begin();
-        spriteBatch.Draw(textures[currentFrame], position, Color.White);
-        spriteBatch.End();
-        Thread.Sleep(15);
-
-    }
 }

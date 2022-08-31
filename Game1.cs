@@ -12,9 +12,9 @@ namespace Sprint0
     {
         private GraphicsDeviceManager _graphics;
         private SpriteBatch _spriteBatch;
-       private ArrayList controllerList;
         private MouseController mouseController;
         private KeyboardController keyboardController;
+        private ArrayList sprites;
         public int currentSprite { get; set; }
         private ISprite fixedSprite;
         private ISprite fixedAnimatedSprite;
@@ -26,8 +26,9 @@ namespace Sprint0
         private Texture2D Luigi;
         private List<Texture2D> marioAnimated;
         private SpriteFont font;
-        private ArrayList sprites;
-        private ArrayList creditsList;
+        private ArrayList updateList;
+        private ArrayList textList;
+        private ISprite current;
         public Game1()
         {
             _graphics = new GraphicsDeviceManager(this);
@@ -38,9 +39,9 @@ namespace Sprint0
         protected override void Initialize()
         {
             // Intialize Lists
+            updateList = new ArrayList();
             sprites = new ArrayList();
-            controllerList = new ArrayList();
-            creditsList = new ArrayList();
+            textList = new ArrayList();
             marioAnimated = new List<Texture2D>();
 
             // Create the controllers
@@ -73,29 +74,38 @@ namespace Sprint0
             // Set the input to the game
             SetGameInput();
 
-            // Add all controllers to the controller list
-            controllerList.Add(keyboardController);
-            controllerList.Add(mouseController);
+            // Add all controllers to the update list
+            updateList.Add(keyboardController);
+            updateList.Add(mouseController);
         }
 
         protected override void Update(GameTime gameTime)
         {
-            foreach (IController controller in controllerList)
+            foreach (IUpdateable items in updateList)
             {
-             controller.Update();
+             items.Update();
             }
            
             // Get the current sprite and draw it out to the screen
-            ISprite current = (ISprite)sprites[currentSprite];
+            current = (ISprite)sprites[currentSprite];
             current.Update();
-            current.Draw();
-             
-            foreach (ISprite credits in creditsList)
-            {
-                credits.Draw();
-            }
-      
+          
             base.Update(gameTime);
+        }
+
+        protected override void Draw(GameTime gameTime)
+        {
+            _spriteBatch.GraphicsDevice.Clear(Color.CornflowerBlue);
+            _spriteBatch.Begin();
+            current.Draw();
+
+            foreach (ISprite text in textList)
+            {
+                text.Draw();
+            }
+
+            _spriteBatch.End();
+            base.Draw(gameTime);
         }
 
         private void SetGameInput()
@@ -125,10 +135,10 @@ namespace Sprint0
         private void CreateSprites()
         {
             // Create the sprites
-            fixedSprite = new fixedSprite(_spriteBatch, new Vector2(450, 240), Luigi);
-            fixedAnimatedSprite = new fixedAnimatedSprite(_spriteBatch, new Vector2(400, 200), marioAnimated);
-            movingAnimatedSprite = new movingAnimatedSprite(_spriteBatch, new Vector2(300, 200), marioAnimated);
-            movingStaticSprite = new movingStaticSprite(_spriteBatch, new Vector2(300, 200), Luigi);
+            fixedSprite = new FixedSprite(_spriteBatch, new Vector2(450, 240), Luigi);
+            fixedAnimatedSprite = new FixedAnimatedSprite(_spriteBatch, new Vector2(400, 200), marioAnimated);
+            movingAnimatedSprite = new MovingAnimatedSprite(_spriteBatch, new Vector2(300, 200), marioAnimated);
+            movingStaticSprite = new MovingStaticSprite(_spriteBatch, new Vector2(300, 200), Luigi);
 
             // Add sprites to the list
             sprites.Add(fixedSprite);
@@ -144,9 +154,9 @@ namespace Sprint0
             textSprite2 = new TextSprite("Sprites from: https://www.mariouniverse.com/wp-content/img/sprites/nes/smb/characters.gif", new Vector2(100, 440), _spriteBatch, font);
 
             //Add credit to the list
-            creditsList.Add(textSprite);
-            creditsList.Add(textSprite1);
-            creditsList.Add(textSprite2);
+            textList.Add(textSprite);
+            textList.Add(textSprite1);
+            textList.Add(textSprite2);
         }
 
 
