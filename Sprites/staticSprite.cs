@@ -6,13 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-    public abstract class staticSprite:ISprite
+    public abstract class StaticSprite:ISprite
     {
     public SpriteBatch spriteBatch;
     public Vector2 position;
     public Texture2D texture;
 
-    public staticSprite(SpriteBatch spriteBatch, Vector2 position, Texture2D texture)
+    public StaticSprite(SpriteBatch spriteBatch, Vector2 position, Texture2D texture)
     {
         this.spriteBatch = spriteBatch;
         this.position = position;

@@ -125,10 +125,10 @@ namespace Sprint0
         private void CreateSprites()
         {
             // Create the sprites
-            fixedSprite = new fixedSprite(_spriteBatch, new Vector2(450, 240), Luigi);
-            fixedAnimatedSprite = new fixedAnimatedSprite(_spriteBatch, new Vector2(400, 200), marioAnimated);
-            movingAnimatedSprite = new movingAnimatedSprite(_spriteBatch, new Vector2(300, 200), marioAnimated);
-            movingStaticSprite = new movingStaticSprite(_spriteBatch, new Vector2(300, 200), Luigi);
+            fixedSprite = new FixedSprite(_spriteBatch, new Vector2(450, 240), Luigi);
+            fixedAnimatedSprite = new FixedAnimatedSprite(_spriteBatch, new Vector2(400, 200), marioAnimated);
+            movingAnimatedSprite = new MovingAnimatedSprite(_spriteBatch, new Vector2(300, 200), marioAnimated);
+            movingStaticSprite = new MovingStaticSprite(_spriteBatch, new Vector2(300, 200), Luigi);
 
             // Add sprites to the list
             sprites.Add(fixedSprite);

@@ -4,10 +4,10 @@ using System;
 using System.Collections.Generic;
 using System.Threading;
 
-public class movingAnimatedSprite : animatedSprite
+public class MovingAnimatedSprite : AnimatedSprite
 
 {
-    public movingAnimatedSprite(SpriteBatch spriteBatch, Vector2 position, List<Texture2D> textures): base(spriteBatch, position, textures) { }
+    public MovingAnimatedSprite(SpriteBatch spriteBatch, Vector2 position, List<Texture2D> textures): base(spriteBatch, position, textures) { }
     public override void Update()
     {
         currentFrame++;

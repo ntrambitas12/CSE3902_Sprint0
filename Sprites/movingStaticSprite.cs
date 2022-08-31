@@ -2,11 +2,11 @@
 using Microsoft.Xna.Framework;
 using System;
 
-class movingStaticSprite: staticSprite
+class MovingStaticSprite: StaticSprite
     {
   
 
-    public movingStaticSprite(SpriteBatch spriteBatch, Vector2 position, Texture2D texture): base(spriteBatch, position, texture) { }
+    public MovingStaticSprite(SpriteBatch spriteBatch, Vector2 position, Texture2D texture): base(spriteBatch, position, texture) { }
 
     public override void Update()
     {

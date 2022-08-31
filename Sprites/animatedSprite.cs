@@ -7,14 +7,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading;
 
-   public abstract class animatedSprite:ISprite
+   public abstract class AnimatedSprite:ISprite
     {
     public int currentFrame;
     public int totalFrames;
     public SpriteBatch spriteBatch;
     public Vector2 position;
     public List<Texture2D> textures;
-    public animatedSprite(SpriteBatch spriteBatch, Vector2 position, List<Texture2D> textures)
+    public AnimatedSprite(SpriteBatch spriteBatch, Vector2 position, List<Texture2D> textures)
     {
         this.spriteBatch = spriteBatch;
         this.position = position;
